@@ -1,7 +1,9 @@
 
 ### Challenge 3 - Bank Transactions
 
-# Create a prompt that asks the user if they would like to display their balance, withdraw or deposit. Write three methods to perform these calculations and output the result to the user. Here is a sample output:
+# Create a prompt that asks the user if they would like to display their balance, withdraw or deposit. 
+# Write three methods to perform these calculations and output the result to the user. 
+# Here is a sample output:
 
 # ```
 # Your current balance is
@@ -15,3 +17,4 @@
 # yes
 # Thank you!
 # ```
+
