@@ -17,4 +17,28 @@
 # yes
 # Thank you!
 # ```
+class Bank
 
+  def initialize(name)
+    @name = name
+  end
+
+  def check
+  	bal=4000
+  	puts "What would you like to do? (balance, withdraw, deposit)"
+  @other = gets.chomp
+  check_balance if @other == "balance"
+  
+  end
+
+  private
+
+  attr_accessor :name
+
+  def check_balance
+    puts "You balance is #{bal}"
+  end
+end
+
+user = Bank.new("user1")
+user.check
