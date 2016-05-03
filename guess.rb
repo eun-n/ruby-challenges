@@ -27,29 +27,31 @@
 class Guess
   def initialize(name, number)
     @name = name
-    @number
   end
 
   def start
+  	number = 1+rand(100)
   	a = 0
     puts "Guess a number between 1 and 100"
     @other = gets.chomp
+    while "#{@number}" != "#{@other}" do
     if "#{@number}" < "#{@other}"
     puts "The number is lower than #{@other}. Guess again"
     	a += 1
         @other = gets.chomp
-
   elsif "#{@number}" > "#{@other}"
   	puts "The number is higher than #{@other}. Guess again"
   	a += 1
   	    @other = gets.chomp
+ end
 
-  elsif "#{@number}" == "#{@other}"
+  if "#{@number}" == "#{@other}"
   	puts "That is correct! You got it in #{a} tries."
     self
   end
 end
 end
+end
 
-guess1 = Guess.new("guess1", 1+rand(100))
+guess1 = Guess.new("guess1"
 guess1.start
