@@ -19,16 +19,19 @@
 # ```
 class Bank
 
-  def initialize(name)
+  def initialize(name, balance)
     @name = name
+    @balance = balance
   end
 
   def check
-  	bal=4000
   	puts "What would you like to do? (balance, withdraw, deposit)"
   @other = gets.chomp
-  check_balance if @other == "balance"
-  
+  	puts "Please verify your identity and insert your username"
+  @check=gets.chomp
+  check_balance if @other == "balance" && @check == "user1"
+  withdraw if @other == "withdraw" && @check == "user1"
+  deposit if @other == "deposit"  && @check == "user1"
   end
 
   private
@@ -36,9 +39,16 @@ class Bank
   attr_accessor :name
 
   def check_balance
-    puts "You balance is #{bal}"
+    
+    puts "Your balance is #{@balance}"
+  end
+  def withdraw
+  	puts "How much would you like to withdraw? (Current Balance: #{balance}"
+  	@withdraw = gets.chomp
+   @balance -= @withdraw.to_i
+    puts "You withdrew #{withdraw}. Your balance is now #{@balance}"
   end
 end
 
-user = Bank.new("user1")
+user = Bank.new("user1", 4000)
 user.check
