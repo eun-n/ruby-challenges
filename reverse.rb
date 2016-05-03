@@ -23,4 +23,13 @@ def reverse (string)
 	puts string
 end
 
-reverse("blah_blah")
+reverse("here's a somewhat long sentence that makes no sense whatsoever")
+
+def string_rev(str)
+	for i in (0..(str.length/2))
+		str[i], str[-i-1] = str[-i-1], str[i]
+	end
+	puts str
+end
+
+string_rev("hello")

@@ -31,7 +31,7 @@ class Guess
 
 	  def start
 		  	number = 1+rand(100)
-		  	a = 0
+		  	a = 1
 		   puts "Guess a number between 1 and 100"
 		   @other = gets.chomp
 		   
