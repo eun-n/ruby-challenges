@@ -42,19 +42,19 @@ class Bank
 
   private
 
-  attr_accessor :name
+  attr_accessor :balance
 
   def check_balance
     puts "Your balance is #{@balance}"
   end
   def withdraw
-  	puts "How much would you like to withdraw? (Current Balance: #{@balance}"
+  	puts "How much would you like to withdraw? (Current Balance: #{@balance})"
   	@withdraw = gets.chomp
   	sum = sub("#{@balance}".to_i, "#{@withdraw}".to_i)
    puts "You withdrew #{@withdraw}. Your balance is now #{sum}"
   end
   def deposit
-  	puts "How much would you like to deposit? (Current Balance: #{@balance}"
+  	puts "How much would you like to deposit? (Current Balance: #{@balance})"
   	@deposit = gets.chomp
   	sum = add("#{@balance}".to_i, "#{@deposit}".to_i)
    puts "You desposited #{@deposit}. Your balance is now #{sum}"
