@@ -15,20 +15,12 @@ def reverse (string)
 	char = String.new(string)
 
 	i = 0
-	while i < string.length/2 do
-	  string[i] = string[string.length-1-i]
+	while i < string.length do
+	  string[i] = char[string.length-1-i]
 	  i += 1
 	end
 
-	i = string.length-1
-	while i > string.length/2 do
-	  string[i] = char[string.length-1-i]
-	  i -= 1
-	end
-
-	string[(string.length)/2] = char[(string.length-1)/2]
-	puts char
 	puts string
 end
 
-reverse("123456789")
+reverse("blah_blah")
