@@ -1,6 +1,10 @@
 ### Challenge 4 - Guessing Game
 
-# Create a program that asks the user to guess a number between 1 and 100. Once the user guesses a number, the program should say, higher, lower, or tell the user that he got the number correct.  The user should continue to make guesses until he guesses correctly. Also, once the user guesses correctly, the program should print the number of guesses needed to arrive at the correct answer. Below is sample output:
+# Create a program that asks the user to guess a number between 1 and 100. 
+# Once the user guesses a number, the program should say, higher, lower, or 
+# tell the user that he got the number correct.  The user should continue to make guesses 
+# until he guesses correctly. Also, once the user guesses correctly, the program should 
+# print the number of guesses needed to arrive at the correct answer. Below is sample output:
 
 # ```
 # Guess a number between 1 and 100
@@ -19,3 +23,33 @@
 # 19
 # You got it in 7 tries
 # ```
+
+class Guess
+  def initialize(name, number)
+    @name = name
+    @number
+  end
+
+  def start
+  	a = 0
+    puts "Guess a number between 1 and 100"
+    @other = gets.chomp
+    if "#{@number}" < "#{@other}"
+    puts "The number is lower than #{@other}. Guess again"
+    	a += 1
+        @other = gets.chomp
+
+  elsif "#{@number}" > "#{@other}"
+  	puts "The number is higher than #{@other}. Guess again"
+  	a += 1
+  	    @other = gets.chomp
+
+  elsif "#{@number}" == "#{@other}"
+  	puts "That is correct! You got it in #{a} tries."
+    self
+  end
+end
+end
+
+guess1 = Guess.new("guess1", 1+rand(100))
+guess1.start
