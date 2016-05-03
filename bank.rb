@@ -23,7 +23,9 @@ class Bank
     @name = name
     @balance = balance
   end
-
+def sub(num1, num2)
+  		return num1-num2
+  	end
   def check
   	puts "What would you like to do? (balance, withdraw, deposit)"
   @other = gets.chomp
@@ -43,10 +45,10 @@ class Bank
     puts "Your balance is #{@balance}"
   end
   def withdraw
-  	puts "How much would you like to withdraw? (Current Balance: #{balance}"
+  	puts "How much would you like to withdraw? (Current Balance: #{@balance}"
   	@withdraw = gets.chomp
-   @balance -= @withdraw.to_i
-    puts "You withdrew #{withdraw}. Your balance is now #{@balance}"
+  	sum = sub("#{@balance}".to_i, "#{@withdraw}".to_i)
+    puts "You withdrew #{@withdraw}. Your balance is now #{sum}"
   end
 end
 
